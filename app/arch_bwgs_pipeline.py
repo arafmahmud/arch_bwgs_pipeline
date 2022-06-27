@@ -24,8 +24,8 @@ parser.add_argument("-tt2", "--trim_tail2", type=str, default="3", required=Fals
 parser.add_argument("-system", "--sequencer", type=str, default="nextseq", required=False, help="Sequencing system (miseq AND nextseq IS SUPPORTED)(default = nextseq)")
 parser.add_argument("-amr", "--amr", type=str, default="y", required=False, help="Generates AMR gene report(NO POINT MUTATION DATA IS GENERATED)(y or n) (default y)")
 parser.add_argument("-vir", "--virulence", type=str, default="y", required=False, help="Generates virulence gene report (y or n) (default y)")
-parser.add_argument("-t", "--threads", type=str, default="4", required=False, help="number of threads int=")
-parser.add_argument("-p", "--parallel", type=str, default="1", required=False, help="paralellization int=")
+parser.add_argument("-t", "--threads", type=str, default="4", required=False, help="number of threads int= (default 4)")
+parser.add_argument("-p", "--parallel", type=str, default="1", required=False, help="paralellization int= (default 1)")
 parser.add_argument("-min", "--minimum_contig_length", type=str, default="100", required=False, help="minimum contig length (default 100)")
 
 
