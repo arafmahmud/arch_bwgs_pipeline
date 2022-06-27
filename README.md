@@ -20,9 +20,14 @@ Install dependencies into the enviroment:
  conda install -y -c bioconda quast
  conda install -y -c bioconda seqtk
  conda install -y -c bioconda bwa
- conda install -y -c bioconda samtools`
- ```
- # Sample Sheet format(sample_sheet.csv)
+ conda install -y -c bioconda samtools
+
+```
+Install arch_bwgs_pipeline:
+
+`pip3 install -e .`
+
+# Sample Sheet format(sample_sheet.csv)
  
  ```
  #strain IDs from sample sheet
