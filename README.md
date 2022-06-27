@@ -8,7 +8,7 @@ Create a conda environment:
 conda create --name arch_bwgs_pipeline
 conda activate arch_bwgs_pipeline`
 ```
-Install dependencies:
+Install dependencies into the enviroment:
 ```
  pip3 install pandas
  conda install -y -c conda-forge -c bioconda -c defaults prokka 
