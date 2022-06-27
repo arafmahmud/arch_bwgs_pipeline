@@ -88,12 +88,17 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers = parallelization_count) as executor:
         run_find_coverage = [executor.submit(find_coverage, args.output, sample) for sample in samples]
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers = parallelization_count) as executor:
-        run_amr_find = [executor.submit(amr_finder, args.output, sample) for sample in samples]
+    if args.amr == "y":
+        with concurrent.futures.ThreadPoolExecutor(max_workers = parallelization_count) as executor:
+            run_amr_find = [executor.submit(amr_finder, args.output, sample) for sample in samples]
+    else:
+        pass
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers = parallelization_count) as executor:
-        run_vir_finder = [executor.submit(vir_finder, args.output, sample) for sample in samples]
-
+    if args.virulence == "y":
+        with concurrent.futures.ThreadPoolExecutor(max_workers = parallelization_count) as executor:
+            run_vir_finder = [executor.submit(vir_finder, args.output, sample) for sample in samples]
+    else:
+        pass
 
 
 if __name__=="__main__":
